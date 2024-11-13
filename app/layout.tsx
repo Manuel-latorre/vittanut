@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import BackgroundVideo from "@/components/BackgroundVideo";
 import Navbar from "@/components/Navbar";
-import { Montserrat } from "next/font/google";
 import WorldGlobe from "@/components/WorldGlobe";
 import NutBenefits from "@/components/NutBenefits";
 import Products from "@/components/Products";
@@ -15,22 +14,21 @@ export const metadata: Metadata = {
   description: "Alimentos sanos para una vida activa",
 };
 
-const montserrat = Montserrat({
-  weight: ["200", "400", "600", "900"],
-  subsets: ["latin"],
-});
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
-      <body className={`${montserrat.className} antialiased`}>
+      <body>
         <div className="relative min-h-screen">
           <BackgroundVideo />
-          <Navbar />
+          <div className="py-4">
+            <Navbar />
+          </div>
           <main>{children}</main>
         </div>
         <div id="" className="min-h-screen py-12">
@@ -45,7 +43,7 @@ export default function RootLayout({
         <div id="" className="min-h-screen py-12">
           <AboutUs/>
         </div>
-        <div id="" className="min-h-screen pt-12">
+        <div id="" className="pt-12">
           <Footer/>
         </div>
       </body>

@@ -14,10 +14,11 @@
     "@radix-ui/react-slot": "^1.1.0",
     "@react-three/drei": "^9.115.0",
     "@react-three/fiber": "^8.17.10",
+    "aos": "^3.0.0-beta.6",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.3.1",
-    "framer-motion": "^11.11.11",
+    "framer-motion": "^11.11.13",
     "lucide-react": "^0.456.0",
     "next": "14.0.2",
     "react": "^18",
@@ -28,6 +29,7 @@
     "three-globe": "^2.34.4"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

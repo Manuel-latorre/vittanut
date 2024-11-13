@@ -23,7 +23,7 @@ export default function MobileMenu() {
           <Bars3Icon width={30} height={30} />
         </button>
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="bg-white">
         <SheetHeader>
           <SheetTitle className="mb-5">
             <Image src={logo} width={150} height={150} alt="LOGO" />

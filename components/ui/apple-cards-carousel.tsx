@@ -9,7 +9,7 @@ import React, {
 
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import Image, { ImageProps } from "next/image";
+import Image, { ImageProps, StaticImageData } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { ArrowLeftIcon, ArrowRightIcon, XIcon } from "lucide-react";
 
@@ -19,7 +19,7 @@ interface CarouselProps {
 }
 
 type Card = {
-  src: string;
+  src: string | JSX.Element;
   title: string;
   category: string;
   content: React.ReactNode;
@@ -160,6 +160,8 @@ export const Card = ({
   layout?: boolean;
 }) => {
   const [open, setOpen] = useState(false);
+
+  
   const containerRef = useRef<HTMLDivElement>(null);
   const { onCardClose, currentIndex } = useContext(CarouselContext);
 
@@ -253,8 +255,8 @@ export const Card = ({
             {card.title}
           </motion.p>
         </div>
-        <BlurImage
-          src={card.src}
+        <Image
+          src={card.src as any}
           alt={card.title}
           fill
           className="object-cover absolute z-10 inset-0"
@@ -280,13 +282,12 @@ export const BlurImage = ({
         isLoading ? "blur-sm" : "blur-0",
         className
       )}
-      onLoad={() => setLoading(false)}
+      onLoadingComplete={() => setLoading(false)}
       src={src}
       width={width}
       height={height}
       loading="lazy"
       decoding="async"
-      blurDataURL={typeof src === "string" ? src : undefined}
       alt={alt ? alt : "Background of a beautiful view"}
       {...rest}
     />

@@ -10,11 +10,11 @@ const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
 export default function WorldGlobe() {
   const globeConfig = {
     pointSize: 4,
-    globeColor: "#062056",
+    globeColor: "#032b76",
     showAtmosphere: true,
     atmosphereColor: "#FFFFFF",
     atmosphereAltitude: 0.1,
-    emissive: "#062056",
+    emissive: "#032b76",
     emissiveIntensity: 0.1,
     shininess: 0.9,
     polygonColor: "rgba(255,255,255,0.7)",
@@ -396,7 +396,7 @@ export default function WorldGlobe() {
 
   return (
     <div className="flex flex-row items-center justify-center h-auto  relative w-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-[40rem] px-4">
+      <div className="max-w-7x mx-auto w-full relative overflow-hidden h-[40rem] px-4">
         <motion.div
           initial={{
             opacity: 0,
@@ -411,17 +411,15 @@ export default function WorldGlobe() {
           }}
           className="div"
         >
-          <h2 className="text-center text-xl md:text-4xl font-bold text-blue-800">
+          <h2 className="titles"  data-aos="fade-right">
             Nueces Pecán de Argentina al mundo
           </h2>
-          <p className="text-center text-base md:text-lg font-normal text-blue-950 max-w-md mt-2 mx-auto">
-            Exportamos a distintos países del mundo como Brazil, Alemania, Portugal y muchos más.
-          </p>
+          <p className="subtitle mt-4" data-aos="fade-right">Buenaventura es el nombre de nuestro campo y hogar.</p>
         </motion.div>
         <div className="w-full h-72 md:h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
-        <p className="mt-4 text-center text-blue-950">Buenaventura es el nombre de nuestro campo y hogar. Ubicado en <span className="font-semibold">Luján, Provincia de Buenos Aires, Argentina</span>.</p>
+        <p className="subtitle mt-4" data-aos="fade-right">Ubicado en la Ruta Provincial 47, Luján, Provincia de Buenos Aires, Argentina.</p>
       </div>
     </div>
   );

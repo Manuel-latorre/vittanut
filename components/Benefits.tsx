@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatedList } from "./ui/animated-list";
-import { ActivityIcon, BoltIcon, BoneIcon, BrainIcon, CrossIcon, EyeIcon, HeartHandshakeIcon, HeartIcon, OmegaIcon, PanelTopCloseIcon, PillBottleIcon, ShieldBan, ShieldBanIcon, ShieldPlusIcon, WeightIcon, ZapIcon } from "lucide-react";
+import { ActivityIcon, BoltIcon, BoneIcon, BrainIcon, CandyIcon, CrossIcon, EyeIcon, HeartHandshakeIcon, HeartIcon, OmegaIcon, PanelTopCloseIcon, PillBottleIcon, SaladIcon, ShieldAlertIcon, ShieldBan, ShieldBanIcon, ShieldPlusIcon, SmileIcon, WeightIcon, ZapIcon } from "lucide-react";
 
 interface Item {
   name: string;
@@ -11,10 +11,10 @@ interface Item {
 
 }
 
-let notifications = [
+/* let notifications = [
   {
     name: "Omega 3",
-    icon: <OmegaIcon width={25} height={25} color="white"/>,
+    icon: <OmegaIcon width={25} height={25} color="#02276B"/>,
     color: "#02276B",
   },
   {
@@ -83,6 +83,70 @@ y aumenta el bueno`,
     icon: <ShieldBanIcon width={25} height={25} color="white"/>,
     color: "#02276B",
   },
+]; */
+
+let notifications = [
+  {
+    name: `Aumenta el colesterol bueno`,
+    icon: <ShieldPlusIcon width={25} height={25} color="#032b76"/>,
+    color: "#ffffff",
+  },
+  {
+    name: `Evita la aparición de enfermedades
+degenerativas`,
+    icon: <ShieldAlertIcon width={25} height={25} color="#032b76"/>,
+    color: "#ffffff",
+  },
+  {
+    name: "Aumenta la capacidad cerebral",
+    //icon: <BoltIcon  width={25} height={25} color="#032b76"/>,
+    icon: <BrainIcon width={25} height={25} color="#032b76"/>,
+    color: "#ffffff",
+  },
+  {
+    name: "Mejora el estado de ánimo",
+    icon: <SmileIcon width={25} height={25} color="#032b76"/>,
+    color: "#ffffff",
+  },
+  {
+    name: `Es fuente de ácidos grasos 
+saludables`,
+    icon: <SaladIcon width={25} height={25} color="#032b76"/>,
+    color: "#ffffff",
+  },
+  {
+    name: `Tiene alto contenido de
+antioxidantes`,
+//icon: <HeartIcon width={25} height={25} color="#032b76"/>,
+    icon: <BoltIcon width={25} height={25} color="#032b76"/>,
+    color: "#ffffff",
+  },
+  {
+    name: `Ayuda a controlar el 
+azúcar en sangre`,
+    icon: <CandyIcon width={25} height={25} color="#032b76"/>,
+    color: "#ffffff",
+  },
+  {
+    name: `Previene de anemia`,
+    icon: <HeartHandshakeIcon width={25} height={25} color="#032b76"/>,
+    color: "#ffffff",
+  },
+  {
+    name: `Fortalece huesos y dientes`,
+    icon: <BoneIcon width={25} height={25 } color="#032b76"/>,
+    color: "#ffffff",
+  },
+  {
+    name: `Previene la degradación ocular`,
+    icon: <EyeIcon width={25} height={25} color="#032b76"/>,
+    color: "#ffffff",
+  },
+  {
+    name: `Previene la hipertensión y trombosis`,
+    icon: <ZapIcon width={25} height={25} color="#032b76"/>,
+    color: "#ffffff",
+  },
 ];
 
 notifications = Array.from({ length: 10 }, () => notifications).flat();
@@ -127,7 +191,7 @@ export default function Benefits({
   return (
     <div
       className={cn(
-        "relative flex h-[600px] max-md:w-[95%] mx-auto w-full flex-col p-6 overflow-hidden rounded-lg border bg-background md:shadow-xl",
+        "relative flex h-[400px] max-md:w-[95%] mx-auto w-full flex-col p-6 overflow-hidden rounded-xl border-b",
         className,
       )}
     >

@@ -1,29 +1,23 @@
 "use client"
 
 import Image from "next/image";
-import Link from "next/link";
-import logo from "../public/logo.png"
+import vittanut from "../public/vittanut.svg"
 import MobileMenu from "./MobileMenu";
+import Vittanut from "./VittanutTextEffect";
 
 
 
 export default function Navbar() {
     return (
-      <nav className="relative z-50 bg-white">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="text-white font-bold text-xl">
-              <Image src={logo} width={150} height={150} alt="LOGO"/>
+      <nav className="z-50 fixed top-5 w-full px-4">
+          <div className="flex items-center justify-between p-2 rounded-2xl bg-white">
+            <div className="flex items-center gap-1">
+              <Image src={vittanut} alt="LOGO" width={40} height={40} data-aos="zoom-in"/>
+              <Vittanut/>
+
             </div>
-            {/* <div className="space-x-6">
-              <a href="#" className="text-white hover:text-gray-300">Inicio</a>
-              <a href="#" className="text-white hover:text-gray-300">Acerca</a>
-              <a href="#" className="text-white hover:text-gray-300">Servicios</a>
-              <a href="#" className="text-white hover:text-gray-300">Contacto</a>
-            </div> */}
             <MobileMenu />
           </div>
-        </div>
       </nav>
     );
   }
