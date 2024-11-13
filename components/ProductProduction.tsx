@@ -11,17 +11,17 @@ const processSteps = [
   {
     title: "Generación de plantas",
     description: "Generación de plantas en el establecimiento.",
-    image: "https://img.freepik.com/foto-gratis/ramas-fondo-nutritiva-fruta-intacta_1142-732.jpg?t=st=1731460716~exp=1731464316~hmac=9bda31ab59f09d7a4773c9bcec0855f6885d35955fec4999284c85774385631e&w=1380"
+    image: "https://i.postimg.cc/zGtJGzLv/planta-pecan.jpg"
   },
   {
     title: "Plantación y cuidados",
     description: "Plantación, sistema de riego y cuidados. Sistema de poda de formación anual.",
-    image: "https://img.freepik.com/foto-gratis/cultive-manos-poniendo-brotes-suelo_23-2147826188.jpg?t=st=1731465320~exp=1731468920~hmac=25b1a55b5b89a0381f25f5d154f1466146bed92ccd5fd08d60d4b666491e2ef6&w=1380"
+    image: "https://i.postimg.cc/j24T0t0s/riego-pecan.jpg"
   },
   {
     title: "Cosecha",
     description: "Comienzo de cosecha a partir decimo año.",
-    image: "https://img.freepik.com/fotos-premium/arbol-nuez-grandes-nueces-concha-verde-cerca-hora-cosecha_206268-6113.jpg?uid=R68096962&ga=GA1.1.1128079462.1729955547&semt=ais_hybrid"
+    image: "https://i.postimg.cc/7hwvNdCj/cosecha-pecan.jpg"
   },
   {
     title: "Cosecha artesanal",
