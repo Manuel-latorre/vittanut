@@ -5,6 +5,7 @@
 @font-face {
   font-family: 'DINRoundPro';
   src: url('/fonts/DINRoundPro.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
 }
 
