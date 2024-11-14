@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="flex flex-col gap-4 max-md:w-[90%] mx-auto text-center text-blue-950">
+    <div className="flex flex-col gap-4 px-4 items-center text-center text-blue-950 py-12">
       <h3 className="titles" data-aos="fade-right">
         Sobre nosotros
       </h3>

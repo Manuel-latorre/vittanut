@@ -19,7 +19,7 @@ export default function MobileMenu() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <button className="text-blue-800">
+        <button className="text-white">
           <Bars3Icon width={30} height={30} />
         </button>
       </SheetTrigger>

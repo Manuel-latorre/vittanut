@@ -5,8 +5,7 @@ import Benefits from './Benefits'
 
 const NutBenefits = () => {
   return (
-    <div className='flex max-md:flex-col items-center justify-center'>
-      {/* <Image src={nuez} width={200} height={100} alt='Imagen' className='w-full h-full rounded-xl'/> */}
+    <div className='flex max-md:flex-col bg-[#7a8130]/30 rounded-b-3xl shadow-lg h-screen'>
       <h3 className='titles' data-aos="fade-right">Beneficios de la Nuez Pecán</h3>
       <Benefits/>
     </div>

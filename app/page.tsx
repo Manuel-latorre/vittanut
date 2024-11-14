@@ -18,10 +18,12 @@ export default function Home() {
 
   return (
     <div className="relative flex flex-col justify-center items-center min-h-[calc(100vh-80px)]">
-      <div className="text-center p-4">
-        <h1 className="text-3xl font-bold mb-4 text-[#7a8130]" data-aos="fade-right">
-          ALIMENTOS SANOS PARA UNA VIDA ACTIVA
-        </h1>
+      <div className="p-4 flex flex-col gap-4 mx-4 rounded-2xl">
+        <p className="text-5xl font-bold mb-4 text-[#7a8130] leading-[1.1]" data-aos="fade-right">
+          ALIMENTOS SANOS <br />
+          PARA UNA VIDA ACTIVA
+        </p>
+        
         <HometText words={description}/>
       </div>
       <div>

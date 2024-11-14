@@ -395,8 +395,8 @@ export default function WorldGlobe() {
   ];
 
   return (
-    <div className="flex flex-row items-center justify-center h-auto  relative w-full">
-      <div className="max-w-7x mx-auto w-full relative overflow-hidden h-[40rem] px-4">
+    <div className="flex flex-row items-center justify-center relative w-full h-screen bg-[#7a8130]/30">
+      <div className="max-w-7x mx-auto w-full relative overflow-hidden h-[40rem] px-4 pt-12">
         <motion.div
           initial={{
             opacity: 0,

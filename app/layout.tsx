@@ -26,26 +26,24 @@ export default function RootLayout({
       <body>
         <div className="relative min-h-screen">
           <BackgroundVideo />
-          <div className="py-4">
             <Navbar />
-          </div>
           <main>{children}</main>
         </div>
-        <div id="" className="min-h-screen py-12">
+        <div id="" className="h-screen">
           <WorldGlobe/>
         </div>
-        <div id="" className="min-h-screen py-12">
+        <div id="" className="h-screen">
           <NutBenefits/>
         </div>
-        <div id="" className="min-h-screen py-12">
+        <div id="" className="h-screen">
           <Products/>
         </div>
-        <div id="" className="min-h-screen py-12">
+        {/* <div id="" className="py-12">
           <AboutUs/>
-        </div>
-        <div id="" className="pt-12">
+        </div> */}
+        {/* <div id="">
           <Footer/>
-        </div>
+        </div> */}
       </body>
     </html>
   );

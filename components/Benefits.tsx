@@ -191,7 +191,7 @@ export default function Benefits({
   return (
     <div
       className={cn(
-        "relative flex h-[400px] max-md:w-[95%] mx-auto w-full flex-col p-6 overflow-hidden rounded-xl border-b",
+        "relative flex max-h-screen max-md:w-[95%] mx-auto w-full flex-col p-6 overflow-hidden rounded-xl border-b",
         className,
       )}
     >

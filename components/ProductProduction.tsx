@@ -92,7 +92,7 @@ export default function ProductProduction() {
   }, [api])
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-4 sm:py-8">
+    <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 sm:py-8 py-12">
       <h2 className="titles mb-8" data-aos="fade-right">Trazabilidad del Proceso de Producción de Nuez Pecán</h2>
       <Carousel setApi={setApi} className="w-full">
         <CarouselContent>
@@ -104,13 +104,13 @@ export default function ProductProduction() {
                     className="relative h-[250px] sm:h-[300px] bg-cover bg-center transition-all duration-300 ease-in-out transform hover:scale-105"
                     style={{ backgroundImage: `url(${step.image})` }}
                   >
-                    <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 opacity-80 hover:opacity-90">
+                    <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300  hover:opacity-90">
                       <div className="p-4 sm:p-6 h-full flex flex-col justify-between">
                         <div>
-                          <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">{step.title}</h3>
-                          <p className="text-xs sm:text-sm text-gray-200">{step.description}</p>
+                          <h3 className="text-2xl font-semibold text-white mb-2">{step.title}</h3>
+                          <p className="text-sm text-white">{step.description}</p>
                         </div>
-                        <div className="text-right text-white text-xs sm:text-sm">Paso {index + 1}</div>
+                        <div className="text-right text-white text-sm">Paso {index + 1}</div>
                       </div>
                     </div>
                   </div>
@@ -124,21 +124,6 @@ export default function ProductProduction() {
           <CarouselNext />
         </div>
       </Carousel>
-      {/* <div className="mt-16 flex justify-center">
-        <div className="flex space-x-2">
-          {processSteps.map((_, index) => (
-            <button
-              key={index}
-              className={cn(
-                "w-3 h-3 rounded-full transition-all duration-300",
-                current === index + 1 ? "bg-primary" : "bg-gray-300"
-              )}
-              onClick={() => api?.scrollTo(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-      </div> */}
     </div>
   )
 }

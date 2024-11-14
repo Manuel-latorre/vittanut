@@ -7,7 +7,7 @@ import { InstagramIcon, MailIcon, PhoneIcon } from "lucide-react";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col gap-4 max-md:w-[90%] mx-auto items-center justify-between text-center text-blue-950 bottom-0">
+    <div className="flex flex-col gap-6 w-full p-4 mx-auto items-center justify-center text-center text-blue-950 bg-[#032b76]/10 rounded-t-3xl mt-16">
       <div className="flex items-center gap-1">
               <Image src={vittanut} alt="LOGO" width={40} height={40} data-aos="zoom-in"/>
               <Vittanut/>
