@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import escarapela from './icons/Escarapela.png'
+import escarapela from './icons/escarapela.png'
 import { InstagramIcon, MailIcon, PhoneIcon } from 'lucide-react'
 import Link from 'next/link'
 
