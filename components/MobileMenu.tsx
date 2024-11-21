@@ -48,6 +48,11 @@ export default function MobileMenu() {
                 Productos
             </Link>
           </SheetClose>
+          <SheetClose asChild>
+            <Link href={"#trazabilidad"} className="text-blue-950 font-semibold text-lg"> 
+              Trazabilidad
+            </Link>
+          </SheetClose>
         </SheetFooter>
        </div>
 

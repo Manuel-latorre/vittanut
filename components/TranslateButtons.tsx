@@ -21,6 +21,7 @@ import {
 import { LanguageIcon } from "@heroicons/react/20/solid"
 import EnglishIcon from "./icons/EnglishIcon"
 import GermanIcon from "./icons/GermanIcon"
+import EspanaIcon from "./icons/EspanaIcon"
 
 const languages = [
   {
@@ -33,6 +34,11 @@ const languages = [
     label: "Deutsche",
     icon: <GermanIcon/>
   },
+  {
+    value:"es",
+    label: "Spanish",
+    icon: <EspanaIcon/>
+  }
 ]
 
 export default function TranslationButtons() {

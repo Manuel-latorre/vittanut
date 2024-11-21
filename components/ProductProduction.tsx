@@ -91,8 +91,8 @@ export default function ProductProduction() {
   }, [api])
 
   return (
-    <div className="w-full">
-      <h2 className="titles mb-12" data-aos="zoom-in">TRAZABILIDAD DE LA NUEZ PECÁN</h2>
+    <div className="w-full" id="trazabilidad">
+      <h2 className="titles mb-12" data-aos="zoom-in">TRAZABILIDAD DE <br /> LA NUEZ PECÁN</h2>
       <Carousel setApi={setApi} className="w-full">
         <CarouselContent>
           {processSteps.map((step, index) => (
