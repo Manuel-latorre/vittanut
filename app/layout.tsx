@@ -13,7 +13,7 @@ const montserrat = Montserrat({subsets: ["latin"]})
 
 export const metadata: Metadata = {
   title: "Vittanut",
-  description: "Alimentos sanos para una vida activa",
+  description: "Tu alimento de vida",
 };
 
 
@@ -25,6 +25,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <body className={`${montserrat.className} bgGeneral antialiased`}>
         <div className="relative min-h-screen">
           <BackgroundVideo />
