@@ -5,7 +5,7 @@ import escarapela from "../public/escarapela1.png"
 
 const NutBenefits = () => {
   return (
-    <div className='flex max-md:flex-col bgGeneral'>
+    <div className='flex max-md:flex-col bgGeneral w-[90%] mx-auto'>
       <div className='flex justify-center rotate-180'>
             <Image src={escarapela} alt='escarapela' width={50} height={50}/>
       </div>

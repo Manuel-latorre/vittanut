@@ -7,7 +7,7 @@ import SmallPackIcon from "./icons/SmallPackIcon";
 
 const Products = () => {
   return (
-    <div className="flex flex-col pt-12">
+    <div className="flex flex-col pt-12 w-[90%] mx-auto">
       <h3 className="titles mb-5" data-aos="zoom-in">
         NUESTRAS PRESENTACIONES
       </h3>
