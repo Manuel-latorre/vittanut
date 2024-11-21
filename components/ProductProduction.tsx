@@ -70,7 +70,7 @@ const processSteps = [
   {
     title: "Distribución",
     description: "Distribución del producto.",
-    image: "https://img.freepik.com/foto-gratis/repartidor-portapapeles_23-2148590673.jpg?t=st=1732131953~exp=1732135553~hmac=240ce3567be567563ee584962480f40820d3340650ee2a14bd97d3d1fab78f98&w=1380"
+    image: "https://res.cloudinary.com/drsrva2kp/image/upload/v1732198953/Captura_de_pantalla_2024-11-21_112030_ee0brv.png"
   }
 ]
 

@@ -35,7 +35,7 @@ export default function RootLayout({
         <div id='nosotros' className="h-screen">
           <AboutUs/>
         </div>
-        <div id="" className="h-screen">
+        <div id="beneficios" className="h-screen">
           <NutBenefits/>
         </div>
         <div id="productos" className="">
