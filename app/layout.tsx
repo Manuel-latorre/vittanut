@@ -31,13 +31,13 @@ export default function RootLayout({
             <Navbar />
           <main>{children}</main>
         </div>
-        <div id="" className="h-screen">
+        <div id='nosotros' className="h-screen">
           <AboutUs/>
         </div>
         <div id="" className="h-screen">
           <NutBenefits/>
         </div>
-        <div id="" className="">
+        <div id="productos" className="">
           <Products/>
         </div>
         <div id="" className="h-screen">
