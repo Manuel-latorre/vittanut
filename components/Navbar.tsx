@@ -1,9 +1,8 @@
 "use client"
 
 import Image from "next/image";
-import vittanut from "../public/vittanut.svg"
+import vittanut from "../components/icons/logo.svg"
 import MobileMenu from "./MobileMenu";
-import Vittanut from "./VittanutTextEffect";
 
 
 
@@ -12,9 +11,7 @@ export default function Navbar() {
       <nav className="z-50 fixed w-full">
           <div className="flex items-center justify-between p-2 bgMenu">
             <div className="flex items-center gap-1">
-              <Image src={vittanut} alt="LOGO" width={40} height={40} data-aos="zoom-in"/>
-              <Vittanut/>
-
+              <Image src={vittanut} alt="LOGO" width={150} height={150} data-aos="zoom-in"/>
             </div>
             <MobileMenu />
           </div>

@@ -3,12 +3,13 @@
 import HometText from "@/components/Home";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import Image from "next/image";
 import { useEffect } from "react";
+import logo from '../components/icons/logo.svg'
 
 // app/page.tsx
 
-const title = `ALIMENTOS SANOS PARA UNA VIDA ACTIVA`
-const description = `Nuestro compromiso asegura un producto de alta calidad y sustentabilidad para alimentar de la mejor manera posible a la población mundial`
+const description = `Productos de alta calidad y sustentabilidad para alimentar al mundo`
 
 export default function Home() {
 
@@ -18,11 +19,11 @@ export default function Home() {
 
   return (
     <div className="relative flex flex-col justify-center items-center min-h-[calc(100vh-80px)]">
-      <div className="p-4 flex flex-col gap-4 mx-4 rounded-2xl">
-        <p className="text-5xl font-bold mb-4 text-[#7a8130] leading-[1.1]" data-aos="fade-right">
-          ALIMENTOS SANOS <br />
-          PARA UNA VIDA ACTIVA
-        </p>
+      <div className="p-4 flex flex-col justify-between mx-4 rounded-2xl">
+        <div className="flex flex-col justify-center text-center pb-24" data-aos="zoom-in">
+          <Image src={logo} alt="logo" width={400} height={400} />
+          <p className="font-semibold text-lg text-[#90b14e]">Tu alimento de vida</p>
+        </div>
         
         <HometText words={description}/>
       </div>

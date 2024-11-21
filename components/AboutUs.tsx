@@ -1,23 +1,26 @@
-import React from "react";
+import Image from 'next/image'
+import React from 'react'
+import campo from '../public/campo.jpg'
+import escarapela from '../public/escarapela1.png'
 
 const AboutUs = () => {
   return (
-    <div className="flex flex-col gap-4 px-4 items-center text-center text-blue-950 py-12">
-      <h3 className="titles" data-aos="fade-right">
-        Sobre nosotros
-      </h3>
+    <div className='w-[90%] mx-auto h-full flex flex-col items-center justify-between pt-4' data-aos="zoom-in">
+        <h1 className='titles'>NUEZ PECAN <br />
+            ORGÁNICA AL MUNDO
+        </h1>
+        <p className='subtitle'>Buenaventura es el nombre de nuestro campo y hogar</p>
+        <Image src={campo} alt='campo' height={1000} className='rounded-xl w-full h-[450px]'/>
+        <p className='subtitle'>Ubicado en la Ruta Provincial 47, Luján, Provincia de Buenos Aires, Argentina.</p>
 
-      <p data-aos="fade-right">
-        Somos una compañía dedicada a promover la alimentación saludable y comprometida con la producción de alimentos orgánicos.
-      </p>
-      <p data-aos="fade-right">
-        Cada año, aumentamos nuestra producción plantando nuevos lotes de árboles, mejorando la estructura del suelo con diferentes pasturas y minerales de origen natural y alimentando nuestros árboles con microorganismos que mantienen su nobleza y salud.
-      </p>
-      <p data-aos="fade-right">
-        Trabajamos incansablemente para que la gente se alimente de la mejor manera posible, contribuyendo al bienestar y salud de nuestros consumidores y al desarrollo sostenible de la región.
-      </p>
+        <div className='historyContainer'>
+            <p>NUESTRA HISTORIA</p>
+        </div>
+        <div className='flex justify-center'>
+            <Image src={escarapela} alt='escarapela' width={50} height={50}/>
+        </div>
     </div>
-  );
-};
+  )
+}
 
-export default AboutUs;
+export default AboutUs

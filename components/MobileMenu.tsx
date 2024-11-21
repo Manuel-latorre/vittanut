@@ -3,14 +3,13 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Bars3Icon } from "@heroicons/react/20/solid";
-import logo from "../public/logo.png";
+import logo from "../components/icons/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,10 +22,10 @@ export default function MobileMenu() {
           <Bars3Icon width={30} height={30} />
         </button>
       </SheetTrigger>
-      <SheetContent className="bg-white">
+      <SheetContent className="bg-[#D7D9C0]">
         <SheetHeader>
           <SheetTitle className="mb-5">
-            <Image src={logo} width={150} height={150} alt="LOGO" />
+            <Image src={logo} alt="logo" width={200} height={200} />
           </SheetTitle>
           
         </SheetHeader>

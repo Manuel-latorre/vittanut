@@ -14,7 +14,7 @@ export default function BackgroundVideo() {
           <source src="/vittanut.mp4" type="video/mp4" />
         </video>
         {/* Capa oscura sobre el video */}
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-[#152501]/70" />
       </div>
     );
   }

@@ -5,22 +5,21 @@
 import * as React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
-import { cn } from "@/lib/utils"
 
 const processSteps = [
   {
-    title: "Generación de plantas",
-    description: "Generación de plantas en el establecimiento.",
+    title: "Cultivo de plantas en el establecimiento",
+    description: "Cultivo de plantas en el establecimiento.",
     image: "https://i.postimg.cc/zGtJGzLv/planta-pecan.jpg"
   },
   {
-    title: "Plantación y cuidados",
+    title: "Implementación de poda",
     description: "Plantación, sistema de riego y cuidados. Sistema de poda de formación anual.",
     image: "https://i.postimg.cc/j24T0t0s/riego-pecan.jpg"
   },
   {
     title: "Cosecha",
-    description: "Comienzo de cosecha a partir decimo año.",
+    description: "Comienzo de cosecha a partir décimo año.",
     image: "https://i.postimg.cc/7hwvNdCj/cosecha-pecan.jpg"
   },
   {
@@ -39,8 +38,8 @@ const processSteps = [
     image: "https://img.freepik.com/fotos-premium/monton-nueces-pecan-aisladas-fondo-crudo_1212634-8186.jpg?uid=R68096962&ga=GA1.1.1128079462.1729955547&semt=ais_hybrid"
   },
   {
-    title: "Clasifiación por tamaño",
-    description: "Clasificación por Tamaño en maquinaria especializada.",
+    title: "Clasificación por tamaño",
+    description: "Clasificación por tamaño en maquinaria especializada.",
     image: "https://img.freepik.com/foto-gratis/tiro-macro-nueces-mercado_23-2148263796.jpg?uid=R68096962&ga=GA1.1.1128079462.1729955547&semt=ais_hybrid"
   },
   {
@@ -70,8 +69,8 @@ const processSteps = [
   },
   {
     title: "Distribución",
-    description: "Distribution del producto.",
-    image: "https://img.freepik.com/foto-gratis/hombre-sujetando-portapapeles-plano-medio_23-2148943317.jpg?t=st=1731466834~exp=1731470434~hmac=026a03f8a16803d8c4f21dee1e83b1a21019e69ef0f9573d0cb8d1d9989b5500&w=1380"
+    description: "Distribución del producto.",
+    image: "https://img.freepik.com/foto-gratis/repartidor-portapapeles_23-2148590673.jpg?t=st=1732131953~exp=1732135553~hmac=240ce3567be567563ee584962480f40820d3340650ee2a14bd97d3d1fab78f98&w=1380"
   }
 ]
 
@@ -92,8 +91,8 @@ export default function ProductProduction() {
   }, [api])
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 sm:py-8 py-12">
-      <h2 className="titles mb-8" data-aos="fade-right">Trazabilidad del Proceso de Producción de Nuez Pecán</h2>
+    <div className="w-full">
+      <h2 className="titles mb-12" data-aos="zoom-in">TRAZABILIDAD DE LA NUEZ PECÁN</h2>
       <Carousel setApi={setApi} className="w-full">
         <CarouselContent>
           {processSteps.map((step, index) => (
@@ -101,16 +100,20 @@ export default function ProductProduction() {
               <Card className="overflow-hidden h-full">
                 <CardContent className="p-0 h-full">
                   <div
-                    className="relative h-[250px] sm:h-[300px] bg-cover bg-center transition-all duration-300 ease-in-out transform hover:scale-105"
+                    className="relative h-[500px] bg-cover bg-center transition-all duration-300 ease-in-out transform hover:scale-105"
                     style={{ backgroundImage: `url(${step.image})` }}
                   >
-                    <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300  hover:opacity-90">
-                      <div className="p-4 sm:p-6 h-full flex flex-col justify-between">
-                        <div>
-                          <h3 className="text-2xl font-semibold text-white mb-2">{step.title}</h3>
-                          <p className="text-sm text-white">{step.description}</p>
+                    <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300  hover:opacity-90">
+                      <div className="p-4 h-full flex flex-col justify-between">
+                        <div className="">
+                          <h3 className="text-2xl font-semibold text-white">{step.title}</h3>
                         </div>
-                        <div className="text-right text-white text-sm">Paso {index + 1}</div>
+                        <div className="flex flex-col gap-4">
+                          <p className="text-base font-medium text-white">{step.description}</p>
+                          <div className="text-right text-white text-sm font-semibold">
+                            Paso {index + 1}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

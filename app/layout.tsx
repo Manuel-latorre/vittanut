@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import BackgroundVideo from "@/components/BackgroundVideo";
 import Navbar from "@/components/Navbar";
-import WorldGlobe from "@/components/WorldGlobe";
 import NutBenefits from "@/components/NutBenefits";
 import Products from "@/components/Products";
+import { Montserrat } from 'next/font/google'
 import AboutUs from "@/components/AboutUs";
+import ExportData from "@/components/ExportData";
 import Footer from "@/components/Footer";
+
+const montserrat = Montserrat({subsets: ["latin"]})
 
 export const metadata: Metadata = {
   title: "Vittanut",
@@ -23,27 +25,27 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body>
+      <body className={`${montserrat.className} bgGeneral antialiased`}>
         <div className="relative min-h-screen">
           <BackgroundVideo />
             <Navbar />
           <main>{children}</main>
         </div>
         <div id="" className="h-screen">
-          <WorldGlobe/>
+          <AboutUs/>
         </div>
         <div id="" className="h-screen">
           <NutBenefits/>
         </div>
-        <div id="" className="h-screen">
+        <div id="" className="">
           <Products/>
         </div>
-        {/* <div id="" className="py-12">
-          <AboutUs/>
-        </div> */}
-        {/* <div id="">
+        <div id="" className="h-screen">
+          <ExportData/>
+        </div>
+        <div id="" className="">
           <Footer/>
-        </div> */}
+        </div>
       </body>
     </html>
   );

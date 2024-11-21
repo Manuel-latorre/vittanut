@@ -87,65 +87,71 @@ y aumenta el bueno`,
 
 let notifications = [
   {
-    name: `Aumenta el colesterol bueno`,
-    icon: <ShieldPlusIcon width={25} height={25} color="#032b76"/>,
-    color: "#ffffff",
+    name: `Aumenta el colesterol 
+bueno`,
+    icon: <ShieldPlusIcon width={25} height={25} color="#3c3f1d"/>,
+    color: "",
   },
   {
-    name: `Evita la aparición de enfermedades
-degenerativas`,
-    icon: <ShieldAlertIcon width={25} height={25} color="#032b76"/>,
-    color: "#ffffff",
+    name: `Evita la aparición 
+de enfermedades degenerativas`,
+    icon: <ShieldAlertIcon width={25} height={25} color="#3c3f1d"/>,
+    color: "",
   },
   {
-    name: "Aumenta la capacidad cerebral",
-    //icon: <BoltIcon  width={25} height={25} color="#032b76"/>,
-    icon: <BrainIcon width={25} height={25} color="#032b76"/>,
-    color: "#ffffff",
+    name: `Aumenta la capacidad 
+cerebral`,
+    //icon: <BoltIcon  width={25} height={25} color="#3c3f1d"/>,
+    icon: <BrainIcon width={25} height={25} color="#3c3f1d"/>,
+    color: "",
   },
   {
-    name: "Mejora el estado de ánimo",
-    icon: <SmileIcon width={25} height={25} color="#032b76"/>,
-    color: "#ffffff",
+    name: `Mejora el estado 
+de ánimo`,
+    icon: <SmileIcon width={25} height={25} color="#3c3f1d"/>,
+    color: "",
   },
   {
     name: `Es fuente de ácidos grasos 
 saludables`,
-    icon: <SaladIcon width={25} height={25} color="#032b76"/>,
-    color: "#ffffff",
+    icon: <SaladIcon width={25} height={25} color="#3c3f1d"/>,
+    color: "",
   },
   {
     name: `Tiene alto contenido de
 antioxidantes`,
-//icon: <HeartIcon width={25} height={25} color="#032b76"/>,
-    icon: <BoltIcon width={25} height={25} color="#032b76"/>,
-    color: "#ffffff",
+//icon: <HeartIcon width={25} height={25} color="#3c3f1d"/>,
+    icon: <BoltIcon width={25} height={25} color="#3c3f1d"/>,
+    color: "",
   },
   {
-    name: `Ayuda a controlar el 
-azúcar en sangre`,
-    icon: <CandyIcon width={25} height={25} color="#032b76"/>,
-    color: "#ffffff",
+    name: `Ayuda a controlar 
+el azúcar en sangre`,
+    icon: <CandyIcon width={25} height={25} color="#3c3f1d"/>,
+    color: "",
   },
   {
     name: `Previene de anemia`,
-    icon: <HeartHandshakeIcon width={25} height={25} color="#032b76"/>,
-    color: "#ffffff",
+    icon: <HeartHandshakeIcon width={25} height={25} color="#3c3f1d"/>,
+    color: "",
   },
   {
-    name: `Fortalece huesos y dientes`,
-    icon: <BoneIcon width={25} height={25 } color="#032b76"/>,
-    color: "#ffffff",
+    name: `Fortalece huesos
+y dientes`,
+    icon: <BoneIcon width={25} height={25 } color="#3c3f1d"/>,
+    color: "",
   },
   {
-    name: `Previene la degradación ocular`,
-    icon: <EyeIcon width={25} height={25} color="#032b76"/>,
-    color: "#ffffff",
+    name: `Previene la degradación 
+ocular`,
+    icon: <EyeIcon width={25} height={25} color="#3c3f1d"/>,
+    color: "",
   },
   {
-    name: `Previene la hipertensión y trombosis`,
-    icon: <ZapIcon width={25} height={25} color="#032b76"/>,
-    color: "#ffffff",
+    name: `Previene la hiper
+tensión y trombosis`,
+    icon: <ZapIcon width={25} height={25} color="#3c3f1d"/>,
+    color: "",
   },
 ];
 
@@ -159,9 +165,9 @@ const Notification = ({ name, icon, color }: Item) => {
         // animation styles
         "transition-all duration-200 ease-in-out hover:scale-[103%]",
         // light styles
-        "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+        "bgBenefit [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
         // dark styles
-        "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
+        "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_1f_inset]",
       )}
     >
       <div className="flex flex-row items-center gap-3">
@@ -175,7 +181,7 @@ const Notification = ({ name, icon, color }: Item) => {
         </div>
         <div className="flex flex-col overflow-hidden">
           <figcaption className="flex flex-row items-center whitespace-pre text-lg font-medium dark:text-white ">
-            <span className="text-sm sm:text-lg font-semibold text-gray-600">{name}</span>
+            <span className="text-sm sm:text-lg font-semibold text-[#d7d9c0]">{name}</span>
           </figcaption>
         </div>
       </div>
@@ -191,7 +197,7 @@ export default function Benefits({
   return (
     <div
       className={cn(
-        "relative flex max-h-screen max-md:w-[95%] mx-auto w-full flex-col p-6 overflow-hidden rounded-xl border-b",
+        "relative flex max-h-[650px] max-md:w-[95%] mx-auto w-full flex-col p-6 overflow-hidden rounded-xl border-b border-[#6f7640]",
         className,
       )}
     >

@@ -1,46 +1,43 @@
-import Image from "next/image";
-import logo from "../public/logo.png";
-import Vittanut from "./VittanutTextEffect";
-import vittanut from "../public/vittanut.svg"
-import Link from "next/link";
-import { InstagramIcon, MailIcon, PhoneIcon } from "lucide-react";
+import Image from 'next/image'
+import React from 'react'
+import escarapela from './icons/Escarapela.png'
+import { InstagramIcon, MailIcon, PhoneIcon } from 'lucide-react'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <div className="flex flex-col gap-6 w-full p-4 mx-auto items-center justify-center text-center text-blue-950 bg-[#032b76]/10 rounded-t-3xl mt-16">
-      <div className="flex items-center gap-1">
-              <Image src={vittanut} alt="LOGO" width={40} height={40} data-aos="zoom-in"/>
-              <Vittanut/>
+    <div className='bgDark rounded-t-3xl p-6 flex flex-col justify-between h-[400px]'>
+        <div className='flex items-center justify-between'>
+            <p className='text-2xl textSoft font-bold'>CONTACTO</p>
+            <Image src={escarapela} alt='Escarapela' width={40} height={40}/>
+        </div>
 
+        <div className='flex flex-col gap-6 px-4'>
+            <div className='flex items-center gap-4 textSoft'>
+                <PhoneIcon width={20} height={20}/>
+                <Link href={"https://wa.me/541159388926"} target='_blank'>
+                    <p className='textSoft font-semibold'>+541159388926</p>
+                </Link>
             </div>
-      {/* <p>Nuez Pecán en mitades.</p>
-      <p>NMC 0802.99.00.21.T</p>
-      <p>Fancy Junio Mammoth Halves - 260-295 mitades por libra.</p>
-      <p>Fancy Jumbo Halves - 325-355 mitades por libra.</p> */}
+            <div className='flex items-center gap-4 textSoft'>
+                <InstagramIcon width={20} height={20}/>
+                <Link href={"https://www.instagram.com/vittanut/"} target='_blank'>
+                    <p className='textSoft font-semibold'>@vittanut</p>
+                </Link>
+            </div>
+            <div className='flex items-center gap-4 textSoft'>
+                <MailIcon width={20} height={20}/>
+                <Link href={"mailto:Somosvittanut@gmail.com"} target='_blank'>
+                    <p className='textSoft font-semibold'>Somosvittanut@gmail.com</p>
+                </Link>
+            </div>
+        </div>
 
-      <div className="flex flex-col gap-4 mt-4">
-        <h4 className="footerTitle" data-aos="fade-right">DATOS EXPORTACIÓN</h4>
-        {/* <p>Certificado de Operación Orgánica</p>
-        <p>Certificado de Procesamiento Orgánico</p> */}
-        <Link className="underline" href={"https://drive.google.com/file/d/1t5g09qRhpwWulbSIYqvPG-Qei-TOfUB5/view"} target="_blank">Certificado por Organización Internacional Agropecuaria (OIA)</Link>
-      </div>
-
-      <div className="flex flex-col gap-4 mt-4 items-center">
-        <h4 className="footerTitle" data-aos="fade-right">CONTACTO</h4>
-        {/* <p>Certificado de Operación Orgánica</p>
-        <p>Certificado de Procesamiento Orgánico</p> */}
-        <Link className="flex items-center gap-2" href={"https://wa.me/541159388926"} target="_blank"><PhoneIcon width={16} height={16}/> +541159388926</Link>
-        <div className="flex items-center gap-2"><MailIcon width={16} height={16}/> Somosvittanut@gmail.com</div>
-        <Link className="flex items-center gap-2" href={"https://instagram.com/vittanut"} target="_blank"><InstagramIcon width={16} height={16}/> vittanut</Link>
-      
-      </div>
-
-      <p className="mt-8">
-        © Copyright <span className="font-semibold">Vanguard IA</span>. Todos
-        los derechos reservados.
-      </p>
+        <div className='flex justify-center text-center'>
+            <p className='textSoft font-light text-sm'>© Copyright Vanguard IA. Todos los derechos reservados.</p>
+        </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
