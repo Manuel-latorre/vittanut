@@ -4,14 +4,18 @@ import Image from "next/image";
 import ProductProduction from "./ProductProduction";
 import BigPackIcon from "./icons/BigPack";
 import SmallPackIcon from "./icons/SmallPackIcon";
+import ProductWeb from "./ProductWeb";
+
+
 
 const Products = () => {
   return (
-    <div className="flex flex-col pt-12 w-[90%] mx-auto">
+    <div className="flex flex-col pt-12 w-[90%] mx-auto lg:mt-24">
       <h3 className="titles mb-5" data-aos="zoom-in">
         NUESTRAS PRESENTACIONES
       </h3>
-      <div className="flex flex-col items-center gap-8 w-[90%] mx-auto bgDark p-4 rounded-xl mb-[20%]">
+      <ProductWeb/>
+      <div className="flex flex-col items-center gap-8 w-[90%] mx-auto bgDark p-4 rounded-xl mb-[20%] lg:hidden">
         <Image
           src={nuez}
           alt="Nuez pecan"

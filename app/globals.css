@@ -47,11 +47,11 @@ body {
 
 
 .titles{
-  @apply font-bold text-2xl text-[#6f7640] text-center
+  @apply font-bold text-2xl text-[#6f7640] text-center lg:text-4xl
 }
 
 .subtitle{
-  @apply text-center text-[#6f7640] font-medium text-base
+  @apply text-center text-[#6f7640] font-medium text-base lg:text-xl
 }
 
 .historyContainer{

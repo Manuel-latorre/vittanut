@@ -52,7 +52,7 @@ export const TextGenerateEffect = ({
 
   return (
     <div className={cn("font-medium", className)}>
-        <div className=" text-white text-lg leading-snug text-center">
+        <div className=" text-white text-lg leading-snug text-center lg:text-2xl">
           {renderWords()}
         </div>
     </div>

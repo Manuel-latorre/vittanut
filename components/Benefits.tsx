@@ -30,79 +30,7 @@ interface Item {
   color: string;
 }
 
-/* let notifications = [
-  {
-    name: "Omega 3",
-    icon: <OmegaIcon width={25} height={25} color="#02276B"/>,
-    color: "#02276B",
-  },
-  {
-    name: "Es autoxidante",
-    icon: <BoltIcon  width={25} height={25} color="white"/>,
-    color: "#02276B",
-  },
-  {
-    name: "Vitamina E",
-    icon: <ActivityIcon width={25} height={25} color="white"/>,
-    color: "#02276B",
-  },
-  {
-    name: "Salud Cerebral",
-    icon: <BrainIcon width={25} height={25} color="white"/>,
-    color: "#02276B",
-  },
-  {
-    name: `Reduce la arteriosclerosis, 
-osteoporosis y la diabetes`,
-    icon: <HeartIcon width={25} height={25} color="white"/>,
-    color: "#02276B",
-  },
-  {
-    name: `Ayuda a perder peso al propor
-cionar saciedad prolongada`,
-    icon: <WeightIcon width={25} height={25} color="white"/>,
-    color: "#02276B",
-  },
-  {
-    name: `Ayuda a la salud del 
-cabello y la piel`,
-    icon: <HeartHandshakeIcon width={25} height={25} color="white"/>,
-    color: "#02276B",
-  },
-  {
-    name: `Fortalece los huesos 
-y los dientes`,
-    icon: <BoneIcon width={25} height={25 } color="white"/>,
-    color: "#02276B",
-  },
-  {
-    name: `Previene la degradación ocular`,
-    icon: <EyeIcon width={25} height={25} color="white"/>,
-    color: "#02276B",
-  },
-  {
-    name: `Proporciona energía ideal 
-para ejercicios de alta intensidad`,
-    icon: <ZapIcon width={25} height={25} color="white"/>,
-    color: "#02276B",
-  },
-  {
-    name: `Reduce el colesterol malo
-y aumenta el bueno`,
-    icon: <ShieldPlusIcon width={25} height={25} color="white"/>,
-    color: "#02276B",
-  },
-  {
-    name: `Ayuda a prevenir la anemia`,
-    icon: <CrossIcon width={25} height={25} color="white"/>,
-    color: "#02276B",
-  },
-  {
-    name: `Evita el estreñimiento`,
-    icon: <ShieldBanIcon width={25} height={25} color="white"/>,
-    color: "#02276B",
-  },
-]; */
+
 
 let notifications = [
   {
@@ -203,7 +131,7 @@ export default function Benefits({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "relative flex max-h-[650px] mx-auto w-full flex-col pt-6 overflow-hidden rounded-xl border-b border-[#6f7640]",
+        "relative flex max-h-[650px] mx-auto w-full flex-col pt-6 overflow-hidden rounded-xl border-b border-[#6f7640] lg:hidden",
         className
       )}
     >

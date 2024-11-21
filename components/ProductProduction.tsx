@@ -60,7 +60,7 @@ const processSteps = [
   {
     title: " Inspección y Tamizado",
     description: "En una mesa vibratoria de inspección, retiro artesanal de imperfecciones e impurezas.",
-    image: "https://img.freepik.com/foto-gratis/hombre-asiatico-maduro-delantal-pie-junto-al-equipo-tostado-cafe-controles-control_1098-20597.jpg?t=st=1731466544~exp=1731470144~hmac=7db98bc0b32bf8b511b388616d9e04ba546157336c17b497ac9d7d3aee646a3f&w=740"
+    image: "https://res.cloudinary.com/drsrva2kp/image/upload/v1732222783/image_1_1_ujliwo.png"
   },
   {
     title: "Empaque Final",
@@ -92,7 +92,7 @@ export default function ProductProduction() {
 
   return (
     <div className="w-full" id="trazabilidad">
-      <h2 className="titles mb-12" data-aos="zoom-in">TRAZABILIDAD DE <br /> LA NUEZ PECÁN</h2>
+      <h2 className="titles mb-12 lg:mt-24" data-aos="zoom-in">TRAZABILIDAD DE <br className="lg:hidden"/> LA NUEZ PECÁN</h2>
       <Carousel setApi={setApi} className="w-full">
         <CarouselContent>
           {processSteps.map((step, index) => (

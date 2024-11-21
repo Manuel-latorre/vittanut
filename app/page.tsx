@@ -20,9 +20,9 @@ export default function Home() {
   return (
     <div className="relative flex flex-col justify-center items-center min-h-[calc(100vh-80px)]">
       <div className="p-4 flex flex-col justify-between mx-4 rounded-2xl">
-        <div className="flex flex-col justify-center text-center pb-24" data-aos="zoom-in">
-          <Image src={logo} alt="logo" width={400} height={400} />
-          <p className="font-semibold text-lg text-[#90b14e]">Tu alimento de vida</p>
+        <div className="flex flex-col justify-center items-center text-center pb-24" data-aos="zoom-in">
+          <Image src={logo} alt="logo" width={400} height={400} className="lg:w-[1000px] "/>
+          <p className="font-semibold text-lg text-[#90b14e] lg:text-6xl">Tu alimento de vida</p>
         </div>
         
         <HometText words={description}/>

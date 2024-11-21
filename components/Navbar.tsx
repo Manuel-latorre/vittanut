@@ -22,18 +22,18 @@ export default function Navbar() {
           />
         </div>
         <div className="items-center gap-4 hidden md:flex">
-          <Link href={"#nosotros"} className="textSoft font-semibold text-lg">
+          <Link href={"#nosotros"} className="textSoft font-semibold text-base lg:text-lg">
             Nosotros
           </Link>
-          <Link href={"#beneficios"} className="textSoft font-semibold text-lg">
+          <Link href={"#beneficios"} className="textSoft font-semibold text-base lg:text-lg">
             Beneficios
           </Link>
-          <Link href={"#productos"} className="textSoft font-semibold text-lg">
+          <Link href={"#productos"} className="textSoft font-semibold text-base lg:text-lg">
             Productos
           </Link>
           <Link
             href={"#trazabilidad"}
-            className="text-blue-950 font-semibold text-lg"
+            className="textSoft font-semibold text-base lg:text-lg"
           >
             Trazabilidad
           </Link>

@@ -1,17 +1,15 @@
 import React from 'react'
 import Benefits from './Benefits'
-import Image from 'next/image'
-import escarapela from "../public/escarapela1.png"
+import BenefitsWeb from './BenefitsWeb'
+
 
 const NutBenefits = () => {
   return (
-    <div className='flex max-md:flex-col bgGeneral w-[90%] mx-auto'>
-      <div className='flex justify-center rotate-180'>
-            <Image src={escarapela} alt='escarapela' width={50} height={50}/>
-      </div>
+    <div className='flex flex-col bgGeneral w-[90%] items-center justify-center mx-auto lg:pt-16'>
       <div className='pt-8'>
-        <h3 className='titles' data-aos="zoom-in">BENEFICIOS DE <br /> LA NUEZ PECÁN</h3>
+        <h3 className='titles' data-aos="zoom-in">BENEFICIOS DE <br className='lg:hidden'/> LA NUEZ PECÁN</h3>
         <Benefits/>
+        <BenefitsWeb/>
 
       </div>
     </div>
