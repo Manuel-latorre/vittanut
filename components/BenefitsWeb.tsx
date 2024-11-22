@@ -83,10 +83,10 @@ import {
 
 const BenefitsWeb = () => {
   return (
-    <div className='max-lg:hidden w-full mx-auto flex flex-wrap justify-center gap-4 px-6 mt-12'>
+    <div className='max-lg:hidden w-full 2xl:w-[60%] mx-auto flex flex-wrap justify-center gap-4 px-2 mt-12'>
         {
             benefits.map((data) => (
-                <div className='p4 rounded-xl bgDark w-[250px] h-[200px] flex flex-col justify-center gap-4 items-center text-center p-4 hover:scale-105 transition-all'>
+                <div className='p4 rounded-xl bgDark max-w-[250px] max-h-[200px] 2xl:h-[200px] flex flex-col justify-center gap-4 items-center text-center p-4 hover:scale-105 transition-all'>
                     {data.icon}
                     <p className='textSoft font-medium text-xl'>{data.name}</p>
                 </div>

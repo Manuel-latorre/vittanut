@@ -12,7 +12,7 @@ const ExportData = () => {
         <Link href={"https://drive.google.com/file/d/1t5g09qRhpwWulbSIYqvPG-Qei-TOfUB5/view"} target='_blank'>
             <p className='underline leading-3 subtitle'>Certificado por Organización Internacional Agropecuaria (OIA)</p>
         </Link>
-        <div className='my-8 lg:hidden'>
+        <div className='mt-8'>
             <Image src={logo} alt="logo" width={250} height={250} />
         </div>
     </div>
