@@ -6,7 +6,7 @@ import nuez from "../public/nuez.jpg";
 
 const ProductWeb = () => {
   return (
-    <div className='max-lg:hidden flex w-full mx-auto rounded-xl h-[600px] bgDark'>
+    <div className='max-lg:hidden flex w-full mx-auto rounded-xl h-[400px] bgDark'>
       {/* Contenedor de imagen - 40% del ancho */}
       <div className='w-[40%] h-full'>
         <Image 
