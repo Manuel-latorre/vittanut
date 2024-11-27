@@ -9,13 +9,13 @@ import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, Car
 const processSteps = [
   {
     title: "Cultivo de plantas en el establecimiento",
-    description: "Cultivo de plantas en el establecimiento.",
+    description: "Germinacion de semillas, cultivo e injerto de variedades específicas.",
     image: "https://i.postimg.cc/zGtJGzLv/planta-pecan.jpg"
   },
   {
-    title: "Implementación de poda",
-    description: "Plantación, sistema de riego y cuidados. Sistema de poda de formación anual.",
-    image: "https://i.postimg.cc/j24T0t0s/riego-pecan.jpg"
+    title: "Plantación y cuidados",
+    description: "Plantación, sistema de riego, prevención y cuidados de agentes externos. Podas anuales de formación.",
+    image: "https://res.cloudinary.com/drsrva2kp/image/upload/v1732708561/imagen-paso2_lih3ny.jpg"
   },
   {
     title: "Cosecha",
@@ -24,7 +24,7 @@ const processSteps = [
   },
   {
     title: "Cosecha artesanal",
-    description: "Sistema de cosecha artesanal con shackers y lonas en campo.",
+    description: "sistema de cosecha artesanal con shackers y lonas en campo.",
     image: "https://img.freepik.com/foto-gratis/agricultor-tractor_155003-12246.jpg?t=st=1731465659~exp=1731469259~hmac=d827ec8d2256623740d598a4557f70c6f7db2814a52fb511440f029ca012a691&w=1380"
   },
   {

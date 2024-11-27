@@ -3,6 +3,7 @@ import React from 'react'
 import campo from '../public/campo.jpg'
 import escarapela from './icons/escarapela.png'
 import { LayoutGridImages } from './AboutUsGridImages'
+import Link from 'next/link'
 
 const AboutUs = () => {
   return (
@@ -16,7 +17,7 @@ const AboutUs = () => {
         <p className='subtitle'>Ubicado en la Ruta Provincial 47, Luján, Provincia de Buenos Aires, Argentina.</p>
 
         <div className='historyContainer'>
-            <p>NUESTRA HISTORIA</p>
+            <Link href={"https://drive.google.com/file/d/1nBoTz5WTyQhFvbtMmzxBk4DyQesCKnr7/view"} target='_blank'>NUESTRA HISTORIA</Link>
         </div>
         <div className='flex justify-center'>
             <Image src={escarapela} alt='escarapela' width={50} height={50}/>
