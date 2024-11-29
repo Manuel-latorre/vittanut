@@ -8,6 +8,7 @@ import { Montserrat } from 'next/font/google'
 import AboutUs from "@/components/AboutUs";
 import ExportData from "@/components/ExportData";
 import Footer from "@/components/Footer";
+import { LanguageProvider } from "./context/LanguageContext";
 
 const montserrat = Montserrat({subsets: ["latin"]})
 
@@ -26,6 +27,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
+      <LanguageProvider>
+
       <body className={`${montserrat.className} bgGeneral antialiased`}>
         <div className="relative min-h-screen">
           <BackgroundVideo />
@@ -48,6 +51,7 @@ export default function RootLayout({
           <Footer/>
         </div>
       </body>
+      </LanguageProvider>
     </html>
   );
 }

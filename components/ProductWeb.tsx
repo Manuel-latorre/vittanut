@@ -1,10 +1,15 @@
+"use client"
+
 import React from 'react'
 import Image from 'next/image'
 import SmallPackIcon from './icons/SmallPackIcon'
 import BigPackIcon from './icons/BigPack'
 import nuez from "../public/nuez.jpg";
+import { useLanguage } from '@/app/context/LanguageContext';
 
 const ProductWeb = () => {
+  const { language } = useLanguage();
+
   return (
     <div className='max-lg:hidden flex w-full mx-auto rounded-xl h-[400px] bgDark'>
       {/* Contenedor de imagen - 40% del ancho */}
@@ -64,7 +69,7 @@ const ProductWeb = () => {
           </div>
           
           <p className="textSoft text-center text-xl lg:text-2xl font-medium" data-aos="zoom-in">
-            Empaquetado con Polietileno de 80 micrones termosellado al vacío
+            {language === "es" ? "Empaquetado con Polietileno de 80 micrones termosellado al vacío" : language === "en" ? "Packaged with 80-micron polyethylene, vacuum-sealed." : "Verpackt mit 80-Mikron-Polyethylen, vakuumversiegelt"}
           </p>
         </div>
       </div>

@@ -1,10 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Check, ChevronsUpDown } from "lucide-react"
-
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import * as React from "react";
+import { Check, ChevronsUpDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -12,38 +11,45 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/components/ui/command"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
-import { LanguageIcon } from "@heroicons/react/20/solid"
-import EnglishIcon from "./icons/EnglishIcon"
-import GermanIcon from "./icons/GermanIcon"
-import EspanaIcon from "./icons/EspanaIcon"
+} from "@/components/ui/command";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { LanguageIcon } from "@heroicons/react/20/solid";
+import EnglishIcon from "./icons/EnglishIcon";
+import GermanIcon from "./icons/GermanIcon";
+import EspanaIcon from "./icons/EspanaIcon";
+import { useLanguage } from "@/app/context/LanguageContext";
 
 const languages = [
   {
     value: "en",
     label: "English",
-    icon: <EnglishIcon/>
+    icon: <EnglishIcon />,
+    switch: "switchToEnglish", // Key for switching
   },
   {
     value: "de",
     label: "Deutsche",
-    icon: <GermanIcon/>
+    icon: <GermanIcon />,
+    switch: "switchToGerman", // Key for switching
   },
   {
-    value:"es",
-    label: "Spanish",
-    icon: <EspanaIcon/>
-  }
-]
+    value: "es",
+    label: "Español",
+    icon: <EspanaIcon />,
+    switch: "switchToSpanish", // Key for switching
+  },
+];
 
 export default function TranslationButtons() {
-  const [open, setOpen] = React.useState(false)
-  const [value, setValue] = React.useState("en") // Default to English
+  const [open, setOpen] = React.useState(false);
+  const { language, switchToEnglish, switchToSpanish, switchToGerman } = useLanguage();
+
+  // Map switch functions
+  const switchFunctions: { [key: string]: () => void } = {
+    switchToEnglish,
+    switchToSpanish,
+    switchToGerman,
+  };
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -54,10 +60,10 @@ export default function TranslationButtons() {
           aria-expanded={open}
           className="w-[200px] justify-between bgGeneral rounded-xl border-[#bfc197] hover:bg-[#bfc197] hover:text-[#3c3f1d] text-[#3c3f1d]"
         >
-        <div className="flex items-center gap-2">
-        <LanguageIcon/>
-        {languages.find((lang) => lang.value === value)?.label}
-        </div>
+          <div className="flex items-center gap-2">
+            <LanguageIcon />
+            {languages.find((lang) => lang.value === language)?.label || "Select Language"}
+          </div>
           <ChevronsUpDown className="opacity-50" />
         </Button>
       </PopoverTrigger>
@@ -66,22 +72,23 @@ export default function TranslationButtons() {
           <CommandList>
             <CommandGroup className="cursor-pointer">
               {languages.map((lang) => (
-                  <CommandItem
+                <CommandItem
                   key={lang.value}
                   value={lang.value}
-                  onSelect={(currentValue) => {
-                      setValue(currentValue)
-                      setOpen(false)
-                    }}
-                    >
+                  onSelect={() => {
+                    const switchFunction = switchFunctions[lang.switch];
+                    if (switchFunction) switchFunction();
+                    setOpen(false);
+                  }}
+                >
                   {lang.icon}
                   {lang.label}
                   <Check
                     className={cn(
-                        "ml-auto",
-                        value === lang.value ? "opacity-100" : "opacity-0"
+                      "ml-auto",
+                      language === lang.value ? "opacity-100" : "opacity-0"
                     )}
-                    />
+                  />
                 </CommandItem>
               ))}
             </CommandGroup>
@@ -89,5 +96,5 @@ export default function TranslationButtons() {
         </Command>
       </PopoverContent>
     </Popover>
-  )
+  );
 }

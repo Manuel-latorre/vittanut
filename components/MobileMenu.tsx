@@ -13,6 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TranslationButtons from "./TranslateButtons";
 import { useCallback } from "react";
+import { useLanguage } from "@/app/context/LanguageContext";
 
 export default function MobileMenu() {
   const handleScroll = useCallback((targetId:any) => {
@@ -43,6 +44,9 @@ export default function MobileMenu() {
     </SheetClose>
   );
 
+  const { language } = useLanguage();
+
+
   return (
     <Sheet>
       <SheetTrigger asChild className="md:hidden">
@@ -60,16 +64,16 @@ export default function MobileMenu() {
 
           <SheetFooter className="flex flex-col gap-4 mt-4">
             <MenuItem href="#nosotros">
-              Nosotros
+              {language === "es" ? "Nosotros" : language === "de" ? "Über uns" : "About us"}
             </MenuItem>
             <MenuItem href="#beneficios">
-              Beneficios
+              {language === "es" ? "Beneficios" : language === "de" ? "Vorteile" : "Benefits"}
             </MenuItem>
             <MenuItem href="#productos">
-              Productos
+              {language === "es" ? "Productos" : language === "de" ? "Produkte" : "Products"}
             </MenuItem>
             <MenuItem href="#trazabilidad">
-              Trazabilidad
+              {language === "es" ? "Trazabilidad" : language === "de" ? "Rückverfolgbarkeit" : "Traceability"}
             </MenuItem>
           </SheetFooter>
         </div>

@@ -1,13 +1,20 @@
+"use client"
+
 import Image from "next/image";import React from "react";
 import escarapela from "./icons/escarapela.png";
 import { InstagramIcon, MailIcon, PhoneIcon } from "lucide-react";
 import Link from "next/link";
+import { useLanguage } from "@/app/context/LanguageContext";
 
 const Footer = () => {
+
+  const { language } = useLanguage();
+
+
   return (
     <div className="bgDark rounded-t-3xl p-6 flex max-lg:flex-col justify-between lg:items-center max-lg:h-[400px] lg:h-[300px]">
       <div className="flex items-center justify-between lg:hidden">
-        <p className="text-2xl textSoft font-bold">CONTACTO</p>
+      <p className="text-2xl textSoft font-bold">{language === "es" ? "CONTACTO" : language === "en" ? "CONTACT" : "KONTAKT"}</p>
         <Image src={escarapela} alt="Escarapela" width={40} height={40} />
       </div>
 
@@ -34,13 +41,14 @@ const Footer = () => {
 
       <div className="flex justify-center text-center lg:hidden">
         <p className="textSoft font-light text-sm">
-          © Copyright Vanguard IA. Todos los derechos reservados.
+          {language === "es" ? "© Copyright Vanguard IA. Todos los derechos reservados." : language === "en" ? "© Copyright Vanguard IA. All rights reserved." : "© Copyright Vanguard IA. Alle Rechte vorbehalten."}
+
         </p>
       </div>
 
       <div className="flex flex-col gap-4  max-lg:hidden px-6">
         <div className="flex items-center gap-4">
-          <p className="text-2xl textSoft font-bold">CONTACTO</p>
+          <p className="text-2xl textSoft font-bold">{language === "es" ? "CONTACTO" : language === "en" ? "CONTACT" : "KONTAKT"}</p>
           <Image src={escarapela} alt="Escarapela" width={40} height={40} />
         </div>
         <div className="flex flex-col gap-6 px-4 mt-4">
@@ -68,7 +76,7 @@ const Footer = () => {
       <div className="max-lg:hidden flex flex-col h-full justify-end items-center">
         <div className="flex justify-center text-center">
           <p className="textSoft font-light text-sm">
-            © Copyright Vanguard IA. Todos los derechos reservados.
+          {language === "es" ? "© Copyright Vanguard IA. Todos los derechos reservados." : language === "en" ? "© Copyright Vanguard IA. All rights reserved." : "© Copyright Vanguard IA. Alle Rechte vorbehalten."}
           </p>
         </div>
       </div>

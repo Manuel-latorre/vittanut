@@ -4,11 +4,13 @@ import Image from "next/image";
 import vittanut from "../components/icons/logo.svg";
 import MobileMenu from "./MobileMenu";
 import Link from "next/link";
-import en from "./icons/english.png";
-import germany from "./icons/germany.png";
 import TranslationButtons from "./TranslateButtons";
+import { useLanguage } from "@/app/context/LanguageContext";
 
 export default function Navbar() {
+
+  const { language } = useLanguage();
+
   return (
     <nav className="z-50 fixed w-full">
       <div className="flex items-center justify-between p-2 bgMenu">
@@ -22,20 +24,17 @@ export default function Navbar() {
           />
         </div>
         <div className="items-center gap-4 hidden md:flex">
-          <Link href={"#nosotros"} className="textSoft font-semibold text-base lg:text-lg">
-            Nosotros
+        <Link href={"#nosotros"} className="textSoft font-semibold text-base lg:text-lg">
+            {language === "es" ? "Nosotros" : language === "de" ? "Über uns" : "About us"}
           </Link>
           <Link href={"#beneficios"} className="textSoft font-semibold text-base lg:text-lg">
-            Beneficios
+            {language === "es" ? "Beneficios" : language === "de" ? "Vorteile" : "Benefits"}
           </Link>
           <Link href={"#productos"} className="textSoft font-semibold text-base lg:text-lg">
-            Productos
+            {language === "es" ? "Productos" : language === "de" ? "Produkte" : "Products"}
           </Link>
-          <Link
-            href={"#trazabilidad"}
-            className="textSoft font-semibold text-base lg:text-lg"
-          >
-            Trazabilidad
+          <Link href={"#trazabilidad"} className="textSoft font-semibold text-base lg:text-lg">
+            {language === "es" ? "Trazabilidad" : language === "de" ? "Rückverfolgbarkeit" : "Traceability"}
           </Link>
         </div>
         <div className="items-center gap-4 hidden md:flex">
